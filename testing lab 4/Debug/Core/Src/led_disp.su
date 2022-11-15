@@ -1,0 +1,5 @@
+led_disp.c:10:6:RED1_ON	8	static
+led_disp.c:13:6:RED2_ON	8	static
+led_disp.c:16:6:RED3_ON	8	static
+led_disp.c:19:6:RED4_ON	8	static
+led_disp.c:22:6:RED5_ON	8	static

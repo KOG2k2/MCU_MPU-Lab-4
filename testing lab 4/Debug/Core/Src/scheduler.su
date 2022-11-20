@@ -1,8 +1,6 @@
-scheduler.c:16:6:swap	24	static
-scheduler.c:22:6:bubbleSort	16	static
-scheduler.c:32:6:assignTaskID	16	static
-scheduler.c:38:6:SCH_Add_Task	24	static
-scheduler.c:53:6:SCH_Dispatch_Tasks	16	static
-scheduler.c:73:6:SCH_Update	4	static
-scheduler.c:78:6:SCH_Delete_Tasks	32	static
-scheduler.c:91:6:REV_SCH_UP	8	static
+scheduler.c:16:6:SCH_shifting	32	static
+scheduler.c:29:6:SCH_Add_Task	56	static
+scheduler.c:56:6:SCH_Dispatch_Tasks	8	static
+scheduler.c:68:6:SCH_Update	4	static
+scheduler.c:73:6:SCH_Delete_Tasks	32	static
+scheduler.c:89:6:REV_SCH_UP	8	static

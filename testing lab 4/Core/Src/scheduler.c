@@ -10,10 +10,9 @@
 sTasks SCH_tasks_G[SCH_MAX_TASKS];
 uint8_t current_index_task = 0;
 
-
 uint8_t addpos = 0;
 
-void SCH_shifting(int index){
+void SCH_shiftingElements(int index){
 	for(int i = current_index_task - 1; i > index; i--){
 		SCH_tasks_G[i] = SCH_tasks_G[i - 1];
 	}
@@ -40,13 +39,14 @@ void SCH_Add_Task(void (*pFunction)(), uint32_t DELAY, uint32_t PERIOD){
 			current_index_task++;
 		}
 		else{
-			while(taskTemp.Delay > SCH_tasks_G[addpos].Delay && addpos < current_index_task){
+			while(1){
 				taskTemp.Delay -= SCH_tasks_G[addpos].Delay;
 				addpos++;
+				if(taskTemp.Delay < SCH_tasks_G[addpos].Delay || addpos > current_index_task) break;
 			}
 
 			current_index_task++;
-			SCH_shifting(addpos);
+			SCH_shiftingElements(addpos);
 			SCH_tasks_G[addpos] = taskTemp;
 			SCH_tasks_G[addpos + 1].Delay -= SCH_tasks_G[addpos].Delay;
 		}

@@ -23,7 +23,6 @@ typedef struct{
 
 #define SCH_MAX_TASKS	40
 
-void SCH_Init();
 void SCH_shiftingElements(int index);
 void SCH_Add_Task(void (*pFunction)(), uint32_t DELAY, uint32_t PERIOD);
 void SCH_Update(void);
